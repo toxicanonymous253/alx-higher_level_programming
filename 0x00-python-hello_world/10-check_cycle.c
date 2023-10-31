@@ -6,7 +6,7 @@
  */
 int check_cycle(listint_t *list)
 {
-	/*Using the hare tortois algorithim*/
+	/*Using the hare tortoise algorithim*/
 	listint_t *slow = list;
 	listint_t *fast = list;
 
