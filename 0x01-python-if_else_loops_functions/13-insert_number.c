@@ -31,8 +31,8 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		temp = temp->next;/*iterate through the linked list*/
 	}
-	r->next = temp->next;
-	temp->next = r;
+	r->next = temp->next;/*r->next will point where temp->next was pointing*/
+	temp->next = r;/*temp->next points to r to complete the linkage*/
 
 	return (r);
 }
