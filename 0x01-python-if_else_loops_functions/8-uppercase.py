@@ -3,7 +3,7 @@ def uppercase(str):
     result = ""
     for char in str:
         if 'a' <= char <= 'z':
-            #convert lowercase to upercase by minusing 32 from the ascii value
+            # convert lowercase to upercase by minusing 32 from the ascii value
             uppercaseChar = chr(ord(char) - 32)
             result += uppercaseChar
         else:
