@@ -17,7 +17,8 @@ listint_t *insert_node(listint_t **head, int number)
 	/*creating the node to be commpared with*/
 	r->n = number;
 	r->next = NULL;
-	/*looking if head is null or the number is greatier than the number in the head*/
+	/*looking if head is null or the number is greatier than the*/
+	/*number in the head */
 	if (*head == NULL || number < (*head)->n)
 	{
 		/*creating a node at the beginning of the node*/
@@ -27,7 +28,7 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 
 	temp = *head;/*Pointing temp at the head of the linked list*/
-	while(temp->next != NULL && number > temp->next->n)
+	while (temp->next != NULL && number > temp->next->n)
 	{
 		temp = temp->next;/*iterate through the linked list*/
 	}
