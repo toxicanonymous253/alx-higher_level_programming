@@ -47,7 +47,8 @@ int is_palindrome(listint_t **head)
 	}
 	second_half = slow;
 	prev_slow->next = NULL;/*Split the list into two halves*/
-	second_half = reverse_list(second_half);/*reverse the second half of the list*/
+	/*reverse the second half of the list*/
+	second_half = reverse_list(second_half);
 
 	listint_t *list1 = *head;
 	listint_t *list2 = second_half;
@@ -55,10 +56,7 @@ int is_palindrome(listint_t **head)
 	while (list1 != NULL && list2 != NULL)
 	{
 		if (list1->n != list2->n)
-		{
 			return (0);
-			break;
-		}
 		list1 = list1->next;
 		list2 = list2->next;
 	}
