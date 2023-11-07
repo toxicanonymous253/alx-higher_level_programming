@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-import sys
-
-if len(sys.argv) == 1:
-    print(f"{len(sys.argv) - 1} arguments:")
-if len(sys.argv) == 2:
-    print(f"{len(sys.argv) - 1} argument:")
-    print(f"{len(sys.argv) - 1}: {sys.argv[1]}")
-if len(sys.argv) > 2:
-    print(f"{len(sys.argv) - 1} arguments:")
-    for i in range(len(sys.argv) - 1):
-        print(f"{i + 1}: {sys.argv[i + 1]}")
+if __name__ == "__main__":
+    from calculator_1 import add, sub, mul, div
+    a = 10
+    b = 5
+    print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+    print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
+    print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
+    print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
