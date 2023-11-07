@@ -1,10 +1,12 @@
-#!/usr/bin/python3
+i#!/usr/bin/python3
 if __name__ == "__main__":
-    from calculator_1 import add, sub, mul, div
-    a = 10
-    b = 5
-
-    print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
-    print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
-    print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
-    print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
+    import sys
+    num = len(sys.argv)
+    if num == 1:
+        print("{:d} arguments.".format(num - 1))
+    elif num == 2:
+        print("{:d} argument:".format(num - 1))
+    else:
+        print("{:d} arguments:".format(num - 1))
+    for i in range(1, num):
+        print("{:d}: {:s}".format(i, sys.argv[i]))
