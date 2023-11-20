@@ -5,5 +5,5 @@ def raise_exception():
     try:
         answer = a + b
         return answer
-    except:
+    except TypeError:
         raise TypeError
